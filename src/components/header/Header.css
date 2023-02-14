@@ -17,6 +17,29 @@
 .nav__toggle {
   color: var(--title-color);
   font-weight: var(--font-medium);
+  position: relative;
+  padding: 0 0 0.3em 0;
+
+  
+}
+
+.nav__logo:hover{
+  color: var(--title-color-dark);
+}
+.nav__logo::before{
+  content: "";
+  display: inline;
+  width: 0%;
+  height: 0.2em;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--clr-primary);
+  transition: width 0.2s ease-in;
+}
+.nav__logo:hover::before,
+.nav__logo:focus::before{
+  width: 100%;
+
 }
 
 .nav__list {
@@ -27,11 +50,14 @@
 .nav__link {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
   transition: 0.3s;
+  padding: 0 0 0.3em 0;
+  position: relative;
+
 }
 
 .nav__icon,
@@ -44,6 +70,24 @@
 .active-link,
 .nav__link:hover {
   color: var(--title-color-dark);
+  /* color: var(--clr-primary); */
+
+}
+.nav__link::before{
+  content: "";
+  display: inline;
+  width: 0%;
+  height: 0.2em;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--clr-primary);
+  transition: width 0.2s ease-in;
+
+}
+
+.nav__link:hover::before,
+.nav__link:focus::before{
+  width: 100%;
 }
 
 /* Change background header */
